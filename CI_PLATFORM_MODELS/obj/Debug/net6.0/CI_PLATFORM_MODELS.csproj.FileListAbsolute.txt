@@ -1,0 +1,14 @@
+C:\Users\pca73\Desktop\repos\CI_PLATFORM_MODELS\bin\Debug\net6.0\CI_PLATFORM_MODELS.deps.json
+C:\Users\pca73\Desktop\repos\CI_PLATFORM_MODELS\bin\Debug\net6.0\CI_PLATFORM_MODELS.dll
+C:\Users\pca73\Desktop\repos\CI_PLATFORM_MODELS\bin\Debug\net6.0\ref\CI_PLATFORM_MODELS.dll
+C:\Users\pca73\Desktop\repos\CI_PLATFORM_MODELS\bin\Debug\net6.0\CI_PLATFORM_MODELS.pdb
+C:\Users\pca73\Desktop\repos\CI_PLATFORM_MODELS\obj\Debug\net6.0\CI_PLATFORM_MODELS.csproj.AssemblyReference.cache
+C:\Users\pca73\Desktop\repos\CI_PLATFORM_MODELS\obj\Debug\net6.0\CI_PLATFORM_MODELS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pca73\Desktop\repos\CI_PLATFORM_MODELS\obj\Debug\net6.0\CI_PLATFORM_MODELS.AssemblyInfoInputs.cache
+C:\Users\pca73\Desktop\repos\CI_PLATFORM_MODELS\obj\Debug\net6.0\CI_PLATFORM_MODELS.AssemblyInfo.cs
+C:\Users\pca73\Desktop\repos\CI_PLATFORM_MODELS\obj\Debug\net6.0\CI_PLATFORM_MODELS.csproj.CoreCompileInputs.cache
+C:\Users\pca73\Desktop\repos\CI_PLATFORM_MODELS\obj\Debug\net6.0\CI_PLATFORM_MODELS.dll
+C:\Users\pca73\Desktop\repos\CI_PLATFORM_MODELS\obj\Debug\net6.0\ref\CI_PLATFORM_MODELS.dll
+C:\Users\pca73\Desktop\repos\CI_PLATFORM_MODELS\obj\Debug\net6.0\CI_PLATFORM_MODELS.pdb
+C:\Users\pca73\Desktop\repos\CI_PLATFORM_MODELS\bin\Debug\net6.0\CI_PLATFORM_MODELS.runtimeconfig.json
+C:\Users\pca73\Desktop\repos\CI_PLATFORM_MODELS\obj\Debug\net6.0\CI_PLATFORM_MODELS.genruntimeconfig.cache

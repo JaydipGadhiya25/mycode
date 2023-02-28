@@ -1,0 +1,14 @@
+C:\Users\pca73\Desktop\repos\CI_PLATFOEM_REPOSITORY\bin\Debug\net6.0\CI_PLATFOEM_REPOSITORY.deps.json
+C:\Users\pca73\Desktop\repos\CI_PLATFOEM_REPOSITORY\bin\Debug\net6.0\CI_PLATFOEM_REPOSITORY.dll
+C:\Users\pca73\Desktop\repos\CI_PLATFOEM_REPOSITORY\bin\Debug\net6.0\ref\CI_PLATFOEM_REPOSITORY.dll
+C:\Users\pca73\Desktop\repos\CI_PLATFOEM_REPOSITORY\bin\Debug\net6.0\CI_PLATFOEM_REPOSITORY.pdb
+C:\Users\pca73\Desktop\repos\CI_PLATFOEM_REPOSITORY\obj\Debug\net6.0\CI_PLATFOEM_REPOSITORY.csproj.AssemblyReference.cache
+C:\Users\pca73\Desktop\repos\CI_PLATFOEM_REPOSITORY\obj\Debug\net6.0\CI_PLATFOEM_REPOSITORY.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pca73\Desktop\repos\CI_PLATFOEM_REPOSITORY\obj\Debug\net6.0\CI_PLATFOEM_REPOSITORY.AssemblyInfoInputs.cache
+C:\Users\pca73\Desktop\repos\CI_PLATFOEM_REPOSITORY\obj\Debug\net6.0\CI_PLATFOEM_REPOSITORY.AssemblyInfo.cs
+C:\Users\pca73\Desktop\repos\CI_PLATFOEM_REPOSITORY\obj\Debug\net6.0\CI_PLATFOEM_REPOSITORY.csproj.CoreCompileInputs.cache
+C:\Users\pca73\Desktop\repos\CI_PLATFOEM_REPOSITORY\obj\Debug\net6.0\CI_PLATFOEM_REPOSITORY.dll
+C:\Users\pca73\Desktop\repos\CI_PLATFOEM_REPOSITORY\obj\Debug\net6.0\ref\CI_PLATFOEM_REPOSITORY.dll
+C:\Users\pca73\Desktop\repos\CI_PLATFOEM_REPOSITORY\obj\Debug\net6.0\CI_PLATFOEM_REPOSITORY.pdb
+C:\Users\pca73\Desktop\repos\CI_PLATFOEM_REPOSITORY\bin\Debug\net6.0\CI_PLATFOEM_REPOSITORY.runtimeconfig.json
+C:\Users\pca73\Desktop\repos\CI_PLATFOEM_REPOSITORY\obj\Debug\net6.0\CI_PLATFOEM_REPOSITORY.genruntimeconfig.cache
