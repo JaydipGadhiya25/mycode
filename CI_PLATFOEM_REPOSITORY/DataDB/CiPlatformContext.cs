@@ -30,6 +30,11 @@ public partial class CiPlatformContext : DbContext
 
     public virtual DbSet<Country> Countries { get; set; }
 
+    internal Task<bool> AnyAsync(Func<object, bool> p)
+    {
+        throw new NotImplementedException();
+    }
+
     public virtual DbSet<FavouriteMission> FavouriteMissions { get; set; }
 
     public virtual DbSet<GoalMission> GoalMissions { get; set; }
@@ -45,6 +50,16 @@ public partial class CiPlatformContext : DbContext
     public virtual DbSet<MissionMedium> MissionMedia { get; set; }
 
     public virtual DbSet<MissionRating> MissionRatings { get; set; }
+
+    internal Task<IEnumerable<object>> ToListAsync()
+    {
+        throw new NotImplementedException();
+    }
+
+    internal Task<T> FindAsync<T>(T? entity)
+    {
+        throw new NotImplementedException();
+    }
 
     public virtual DbSet<MissionSkill> MissionSkills { get; set; }
 

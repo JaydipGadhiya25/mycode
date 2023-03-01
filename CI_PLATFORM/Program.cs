@@ -12,7 +12,8 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 builder.Services.AddDbContext<CI_PLATFORM_REPOSITORY.DataDB.CiPlatformContext>(
         options => options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
 
-    builder.Services.AddScoped<IRepository<User>,Repository<User>>();
+    builder.Services.AddScoped<IRepository<Task>,IRepository<Task>>();
+
 
 
 var app = builder.Build();

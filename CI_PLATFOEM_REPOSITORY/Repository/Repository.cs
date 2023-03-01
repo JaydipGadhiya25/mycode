@@ -8,53 +8,63 @@ using System.Threading.Tasks;
 
 namespace CI_PLATFOEM_REPOSITORY.Repository
 {
-    public class Repository<T> : IRepository<T> where T : class
+    public class Repository<T> : IRepository<T> where T : class 
     {
-        private readonly CiplatformContext _context;
-        private readonly DbSet<T> _dbset;
-        private object _dbSet;
+        private readonly CiPlatformContext _context;
+       
 
         public Repository(CiPlatformContext context) {
-            _context= new CiplatformContext();
-            _dbset =context.Set<T>();
+            _context=context;
+            
         }
 
-        public async Task AddAsync(T entity)
+        public async Task<bool> ExistAsync(string Email)
         {
-            await _dbset.AddAsync(entity);
+            return await _context.AnyAsync(e => e.GetType().GetProperty("Email").GetValue(e).Equals(Email));
         }
+    
 
-        public Task DeleteAsync(T entity)
+       
+
+        public async Task UserAddAsync(T entity)
         {
-            _dbset.Remove(entity);
-            return Task.CompletedTask;
+            await _context.AddAsync(entity);
         }
 
-        public async Task<bool> ExistsAsync(string id)
+        public void UserDelete(T entity)
         {
-            return await _dbset.AnyAsync(e => e.GetType().GetProperty("Id").GetValue(e).Equals(id));
+            _context.Remove(entity);
         }
-        
 
-        public async Task<IEnumerable<T>> GetAllAsync()
+        public async Task<bool> UserExistsAsync(string Email, string Password)
         {
-            return await _dbset.ToListAsync();
+            return await _context.AnyAsync(e => e.GetType().GetProperty("Email").GetValue(e).Equals(Email));
+            return await _context.AnyAsync(u => u.GetType().GetProperty("Password").GetValue(u).Equals(Password));
         }
 
-        public async Task<T> GetByIdAsync(int id)
+        public async Task<IEnumerable<T>> UserGetAllAsync()
         {
-
-            return await _dbset.FindAsync(id);
+            return (IEnumerable<T>)await _context.ToListAsync();
         }
 
-        public async Task SaveChangesAsync(T entity)
+        public async Task<T> UserGetByIdAsync(T entity)
+        {
+            return await _context.FindAsync(entity);
+        }
+
+        public async Task UserSaveChangesAsync(T entity)
         {
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateAsync(T entity)
+        public async Task UserUpdateAsync(T entity)
         {
-             _dbset.Update(entity);
+            _context.Update(entity);
+        }
+
+        Task IRepository<T>.UserDelete(T entity)
+        {
+            throw new NotImplementedException();
         }
     }
 

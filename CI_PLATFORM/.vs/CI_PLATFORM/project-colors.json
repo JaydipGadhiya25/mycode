@@ -10,7 +10,17 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
+    },
+    "04c251f3-c8d9-49d0-b70f-7968aaf6e658": {
+      "ProjectGuid": "04c251f3-c8d9-49d0-b70f-7968aaf6e658",
+      "DisplayName": "CI_PLATFORM_MODELS",
+      "ColorIndex": 1
+    },
+    "ec5ef5bd-c25f-4a5b-b94e-8bb9ed9d0bcb": {
+      "ProjectGuid": "ec5ef5bd-c25f-4a5b-b94e-8bb9ed9d0bcb",
+      "DisplayName": "CI_PLATFOEM_REPOSITORY",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 3
 }

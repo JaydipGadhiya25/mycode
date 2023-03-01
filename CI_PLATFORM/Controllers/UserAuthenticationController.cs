@@ -7,10 +7,13 @@ namespace CI_PLATFORM.Controllers
 {
     public class UserAuthenticationController : Controller
     {
-        private readonly IRepository<User> _userRepository;
-        public UserAuthenticationController(IRepository<User> repository)
+        
+        private IRepository<User> db;
+
+       
+        public UserAuthenticationController(IRepository<User> _db)
         {
-            _userRepository = repository;
+            db = _db;
         }
 
         public IActionResult Login(string? ReturnUrl="")
@@ -27,12 +30,13 @@ namespace CI_PLATFORM.Controllers
         {
             if (ModelState.IsValid)
             {
-                var userExists = _userRepository.ExistsAsync(loginobj.Email);
+                
+                var userExists = db.UserExistsAsync(loginobj.Email, loginobj.Password);
                 
 
                 if (await userExists)
                 {
-                    return View(loginobj);
+                    return RedirectToAction("MissionListing", "Mission"); ;
                 }
                 else
                 {
@@ -57,28 +61,29 @@ namespace CI_PLATFORM.Controllers
         [HttpPost]
         [Route("UserAuthentication/ForgotPassword")]
 
-        public IActionResult ForgotPassword(ForgotPassword forgotpasswordobj)
+        public async Task<IActionResult> ForgotPassword(ForgotPassword forgotpasswordobj)
         {
-            //if (ModelState.IsValid)
-            //{
+            if (ModelState.IsValid)
+            {
 
+                var userexists = db.ExistAsync(forgotpasswordobj.Email);
+                if (await userexists)
+                {
+                    return RedirectToAction("ResetPassword", "UserAuthentication");
+                   
+                }
+                else
+                {
+                    ModelState.AddModelError("Email", "Enter valid Email address..!");
+                    return View(forgotpasswordobj);
+                }
 
-            //    //if ()
-            //    //{
-            //    //    ModelState.AddModelError("Email", "Enter valid Email address..!");
-            //    //    return View(forgotpasswordobj);
-            //    //}
-            //    //else
-            //    //{
-            //    //    return RedirectToAction("ResetPassword", "UserAuthentication");
-            //    //}
-
-            //}
-            //else
-            //{
-            //    return View();
-            //}
-            return View();
+            }
+            else
+            {
+                return View();
+            }
+            
         }
 
 
@@ -93,11 +98,11 @@ namespace CI_PLATFORM.Controllers
         {
             if (ModelState.IsValid)
             {
-                //if(registrationobj.Password != registrationobj.ConfirmPassword)
-                //{
-                //    ModelState.AddModelError("ConfirmPassword", "Password not matching..!");
-                //    return View(registrationobj);
-                //}
+                if (registrationobj.Password != registrationobj.ConfirmPassword)
+                {
+                    ModelState.AddModelError("ConfirmPassword", "Password not matching..!");
+                    return View(registrationobj);
+                }
 
                 CI_PLATFORM_REPOSITORY.DataDB.User user = new User()
                 {
@@ -108,8 +113,8 @@ namespace CI_PLATFORM.Controllers
                     Password = registrationobj.Password
                 };
 
-                _userRepository.AddAsync(user);
-                _userRepository.SaveChangesAsync(user);
+                db.UserAddAsync(user);
+                db.UserSaveChangesAsync(user);
                 return View("Login");
 
 
